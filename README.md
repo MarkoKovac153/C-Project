@@ -1,2 +1,0 @@
-# C-Project
-Learning C
