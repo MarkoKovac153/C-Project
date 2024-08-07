@@ -64,11 +64,11 @@ int main(int argc, char *argv[]) {
 
         render_aabb((f32*)&test_aabb, (vec4){1, 1, 1, 0.5});
 
-        if (physics_point_intersect_aabb(pos, test_aabb)){
-            render_quad(pos, (vec2){5,5}, RED);
+        if (physics_point_intersect_aabb(pos, test_aabb))
+            render_quad(pos, (vec2){5,5}, (vec4){1, 0, 0, 0.5});
         else
-            render_quad(pos, (vec2){5,5}, WHITE)
-        }
+            render_quad(pos, (vec2){5,5}, WHITE);
+        
 
         render_end();
         time_update_late();

@@ -19,7 +19,7 @@ static char *config_get_value(const char *config_buffer, const char *value) {
     char *line = strstr(config_buffer, value);
     if (!line)
         ERROR_EXIT("Could not find config value: %s."
-            "Try deleting config.ini and restarting.\n");
+            "Try deleting config.ini and restarting.\n", value);
 
     size_t len = strlen(line);
     char *end = line + len;
@@ -79,7 +79,7 @@ void config_init(void) {
 void config_key_bind(Input_Key key, const char *key_name) { 
     SDL_Scancode scan_code = SDL_GetScancodeFromName(key_name);
     if (scan_code == SDL_SCANCODE_UNKNOWN)
-        ERROR_RETURN("Invalid scan code when binding key: %s\n", key_name);
+        ERROR_RETURN(, "Invalid scan code when binding key: %s\n", key_name);
 
     global.config.keybinds[key] = scan_code;
 }

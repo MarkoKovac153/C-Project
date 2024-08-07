@@ -17,6 +17,6 @@ typedef struct body{
 
 void physics_init(void);
 void physics_update(void);
-usize physics_body_creat(vec2 position, vec2 size);
+usize physics_body_create(vec2 position, vec2 size);
 Body *physics_body_get(usize index);
 bool physics_point_intersect_aabb(vec2 point, AABB aabb);
