@@ -12,7 +12,7 @@ typedef enum key_state {
     KS_UNPRESSED,
     KS_PRESSED,
     KS_HELD
-}Key_State;
+} Key_State;
 
 typedef struct input_state {
     Key_State left;
